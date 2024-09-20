@@ -24,6 +24,13 @@ class _SigninScreenState extends State<SigninScreen> {
           width: 300,
           padding: const EdgeInsets.all(18),
           decoration: const BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0.1, 1),
+                    blurRadius: 0.1,
+                    spreadRadius: 0.1,
+                    color: Colors.black)
+              ],
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20))),
           child: Column(
