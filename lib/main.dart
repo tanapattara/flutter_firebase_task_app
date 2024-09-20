@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:task/screen/signin_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,25 +15,25 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
-        useMaterial3: true,
-      ),
-      home: const TodaApp(),
-    );
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
+          useMaterial3: true,
+        ),
+        home: const SigninScreen() //TodoApp(),
+        );
   }
 }
 
-class TodaApp extends StatefulWidget {
-  const TodaApp({
+class TodoApp extends StatefulWidget {
+  const TodoApp({
     super.key,
   });
 
   @override
-  State<TodaApp> createState() => _TodaAppState();
+  State<TodoApp> createState() => _TodoAppState();
 }
 
-class _TodaAppState extends State<TodaApp> {
+class _TodoAppState extends State<TodoApp> {
   late TextEditingController _texteditController;
   late TextEditingController _descriptionController;
 
